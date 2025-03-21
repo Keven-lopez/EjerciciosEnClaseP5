@@ -191,7 +191,13 @@ public class Lista {
     public void ordenarAscendente() {
     	Nodo actual = primero;
     	while (actual != null && actual.enlace !=null) {
-    		
+    		Nodo comparador = actual;
+    		if (comparador.dato >= actual.dato) {
+    			primero = comparador;
+    		} else {
+    			Nodo siguente = comparador;
+    			primero.enlace = siguente;
+    		}
     	}
     }
    
